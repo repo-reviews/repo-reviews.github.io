@@ -56,6 +56,7 @@ jobs:
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_SHA: ${{ github.sha }}
       with:
         filename: .github/ISSUE_TEMPLATE_REVIEW_CREATED.md
     - name: Build and test site
