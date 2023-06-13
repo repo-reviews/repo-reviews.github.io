@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# fetches list of US repos from the social media registry, and outputs merged list to command line
+# @todo, can this be done automagically without loosing formatting and comments?
+
+require 'open-uri'
+require 'json'
+require 'yaml'
+require 'typhoeus'
+
+def org_exists?(org)
+  Typhoeus.head("https://github.com/orgs/#{org}/people", accept_encoding: 'gzip').success?
+rescue TyphoeusError
+  false
+end
+
+def org_file_path
+  File.expand_path '../_data/governments.yml', File.dirname(__FILE__)
+end
+
+def org_file
+  @org_file ||= YAML.load_file org_file_path
+end
+
+gov      = org_file.values.flatten
+us_gov   = org_file['U.S. Federal'].map(&:downcase)
+research = YAML.load_file('./_data/research.yml').values.flatten
+existing = (gov + research).flatten.map(&:downcase)
+
+orgs = JSON.parse URI.open('https://usdigitalregistry.digitalgov.gov/api/v1/social_media.json?services=github').read
+orgs = orgs['results'].collect { |data| data['account'] }
+orgs.delete('')
+
+orgs.each do |org|
+  next if existing.any? { |s| s.casecmp(org).zero? }
+
+  if org_exists? org
+    org_file['U.S. Federal'].push(org)
+  else
+    puts "\n\nIn the registry, but not valid '#{org}'"
+  end
+end
+
+org_file['U.S. Federal'] = org_file['U.S. Federal'].uniq.sort_by(&:upcase)
+
+puts "\n\nMissing from registry:"
+puts((us_gov - orgs.map(&:downcase)).to_yaml)
+
+comment = File.read(org_file_path).lines.first
+output = comment
+output << "\n"
+output << org_file.to_yaml.sub(/\A---\n/, '').gsub(/^-/, '  -').gsub(/\n([^ ])/, "\n\n\\1")
+
+File.write(org_file_path, output)

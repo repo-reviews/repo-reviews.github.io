@@ -1,0 +1,27 @@
+name: Test site build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: "0"
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+    - name: Show GitHub context   
+      env: 
+        GITHUB_CONTEXT: ${{ toJson(github) }}   
+      run: echo "$GITHUB_CONTEXT"
+      shell: bash
+    - name: Build and test site
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}   
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: bundle exec rake test

@@ -1,0 +1,27 @@
+{
+  "name": "repo-reviews.github.io",
+  "version": "1.0.0",
+  "description": "![screenshot](assets/img/screenshot.png)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/repo-reviews/repo-reviews.github.io.git"
+  },
+  "author": "",
+  "license": "GPL 3.0",
+  "bugs": {
+    "url": "https://github.com/repo-reviews/repo-reviews.github.io/issues"
+  },
+  "homepage": "https://repo-reviews.github.io",
+  "dependencies": {
+    "octicons": "^5.0.1",
+    "primer-core": "^6.2.0",
+    "primer-marketing": "^5.2.0"
+  }
+}

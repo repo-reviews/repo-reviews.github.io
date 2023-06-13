@@ -1,0 +1,147 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'json'
+require 'typhoeus'
+require 'front_matter_parser'
+require 'date'
+
+ghc = JSON.parse(ENV['GITHUB_CONTEXT'])
+puts "REPO OWNER: #{ghc['repository_owner']}"
+puts "FROM SHA: #{ghc['event']['before']}"
+puts "TO SHA: #{ghc['sha']}"
+puts "ACTOR: #{ghc['actor']}"
+puts "AUTHOR: #{ghc['event']['commits'][0]['author']['username']}"
+
+# validate only files changed are in new_reviews
+
+# set author as github actor and date_today as yyyy-mm-dd
+#author = ghc['actor']
+author = "#{ghc['event']['commits'][0]['author']['username']}"
+date_today = Date.today.to_s
+
+# validate _authors page exists, if not create one
+author_basename = "#{author}.md"
+authors_path = "#{File.expand_path('../_authors/', File.dirname(__FILE__))}"
+new_author_file = authors_path + "/" + author_basename
+
+puts "---- Create if not exists _author page for: #{author} at:"
+
+unless File.file?(new_author_file)
+
+  puts "---- Creating _author page for: #{author} at:"
+  puts new_author_file
+
+  contents = <<-END
+---
+layout: author
+author_github_id: #{author}
+---
+END
+
+  puts contents
+
+  File.open(new_author_file, "w")
+  File.write(new_author_file, contents)
+
+  puts `ls #{new_author_file}`
+  puts `cat #{new_author_file}`
+
+end
+
+
+
+
+
+
+# Process the new_reviews/ directory
+
+files = Dir["#{File.expand_path('../new_reviews/', File.dirname(__FILE__))}/*.md"]
+
+files.each do |file|
+
+  puts "processing new_reviews file: " + file
+
+  contents = File.read(file)
+
+  pfm = FrontMatterParser::Parser.parse_file(file)
+
+  # create new review in _reviews
+  review_basename = date_today + '_' + author + '_' + pfm['repository_owner'] + '_' + pfm['repository_name'] + ".md"
+  puts review_basename
+
+  reviews_path = "#{File.expand_path('../_reviews/', File.dirname(__FILE__))}"
+  puts reviews_path
+
+  new_review_file = reviews_path + "/" + review_basename
+  puts new_review_file
+
+  # validate review does not already exist
+  if File.file?(new_review_file)
+    puts "ERROR: review already exists: #{new_review_file}"
+    puts "ERROR: please remove or modify"
+    exit 1
+  end
+
+  contents = <<-END
+---
+layout: review
+repository_owner: #{pfm['repository_owner']}
+repository_name: #{pfm['repository_name']}
+review_title: #{pfm['review_title']}
+author_github_id: #{author}
+date: #{date_today}
+---
+#{pfm.content}
+END
+
+  puts contents
+
+  File.open(new_review_file, "w")
+
+  File.write(new_review_file, contents)
+
+  puts `ls #{new_review_file}`
+  puts `cat #{new_review_file}`
+
+  # validate _authors page exists, if not create one
+  repo_basename = "#{pfm['repository_owner']}_#{pfm['repository_name']}.md"
+  repos_path = "#{File.expand_path('../_repos/', File.dirname(__FILE__))}"
+  new_repo_file = repos_path + "/" + repo_basename
+
+  unless File.file?(new_repo_file)
+
+    puts "---- Creating _repo page at:"
+    puts new_repo_file
+
+    contents = <<-END
+---
+layout: repo
+repository_owner: #{pfm['repository_owner']}
+repository_name: #{pfm['repository_name']}
+---
+END
+
+    puts contents
+
+    File.open(new_repo_file, "w")
+    File.write(new_repo_file, contents)
+
+    puts `ls #{new_repo_file}`
+    puts `cat #{new_repo_file}`
+
+  end
+
+  puts `ls -la ./script/notify_repo_via_issue.sh`
+  puts '----------------------------------------'
+  puts "running ./script/create_issue.sh"
+  puts `./script/create_issue.sh`
+  puts '----------------------------------------'
+#  puts "running ./script/notify_repo_via_issue.sh"
+#  puts `./script/notify_repo_via_issue.sh #{ENV['GITHUB_TOKEN']} #{pfm['repository_owner']} #{pfm['repository_name']} #{author} #{new_review_file}`
+  puts '----------------------------------------'
+
+end
+
+puts "Finishing up ... "
+

@@ -1,0 +1,26 @@
+{% include header.html %}
+
+<section class="container-lg p-responsive py-5 py-md-6 my-lg-6">
+
+	<h2>Author details</h2>
+<hr>
+	<h3><a href="https://github.com/{{ page.author_github_id}}">
+            {% octicon mark-github height:24 class:"fill-gray-light d-inline" aria-label:github-logo %}
+		</a> {{ page.author_github_id }}</h3>
+	<br>
+
+	<a href="https://github.com/{{ page.author_github_id}}"><img align="center" src="https://github-readme-stats.vercel.app/api?username={{ page.author_github_id }}&show_icons=true&theme=transparent" alt="Author stats"/></a>
+
+<hr>
+
+<h2>Reviews by {{ page.author_github_id }}</h2>
+<ul>
+  {% assign filtered_reviews = site.reviews | where: 'author_github_id', page.author_github_id %}
+  {% for review in filtered_reviews %}
+    <li>{{ review.date | date_to_string}} [<a href="https://repo-reviews.github.io/repos/{{review.repository_owner}}_{{review.repository_name}}">{{ review.repository_owner}}/{{review.repository_name}}</a>] <a href="https://repo-reviews.github.io/authors/{{review.author_github_id}}">@{{ review.author_github_id}}</a> - <a href="https://repo-reviews.github.io/{{review.url | relative_url}}">{{ review.review_title }}</a></li>
+  {% endfor %}
+</ul>
+
+</section>
+
+{% include footer.html %}

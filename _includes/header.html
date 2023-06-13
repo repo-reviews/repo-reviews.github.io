@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8C4XV967C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V8C4XV967C');
+</script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | relative_url }}" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" crossorigin>
+  {% seo %}
+</head>
+
+<body{% if page.id %} id="{{ page.id }}"{% endif %} class="{{ page.layout }}">
+
+  <div class="page-header pt-4 pb-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <ul>
+          <li class="text-center d-block d-sm-inline-block px-1 px-md-3"><a href="{{ "/" | relative_url}}" class="text-white">Home</a></li>
+          <li class="text-center d-block d-sm-inline-block px-1 px-md-3"><a href="https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md" target="_blank" class="text-white">Create Review</a></li>
+          <li class="text-center d-block d-sm-inline-block px-1 px-md-3"><a href="https://repo-reviews.github.io/repos" class="text-white">Repos</a></li>
+          <li class="text-center d-block d-sm-inline-block px-1 px-md-3"><a href="https://repo-reviews.github.io/authors" class="text-white">Authors</a></li>
+          <li class="text-center d-block d-sm-inline-block px-1 px-md-3"><a href="https://github.com/repo-reviews/repo-reviews.github.io" class="text-white">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  <div class="container-lg p-responsive py-4 py-lg-6 my-xl-4 text-center">
+    <h1 class="alt-h1 mb-2 text-white"><a href="{{ "/" | relative_url}}" class="text-white">Repo Reviews</a></h1>
+    <p class="f2-light text-white">Review any GitHub repo.</p>
+  </div>
+</div>
+
+

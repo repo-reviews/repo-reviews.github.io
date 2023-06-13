@@ -1,0 +1,26 @@
+name: Validate new_reviews PR
+
+on:
+  pull_request:
+    paths:
+      - "new_reviews/*.md"
+        # - "script/validate-new-reviews"
+        # - ".github/workflows/validate-new-reviews-pr.yml"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+    - name: Validate new_reviews PR
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}   
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        bundle exec script/validate-new-reviews

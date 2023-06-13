@@ -1,0 +1,55 @@
+name: Process new_reviews
+
+on:
+  push:
+    paths:
+      - "new_reviews/*.md"
+      - "script/process-new-reviews"
+      - ".github/workflows/process-new-reviews.yml"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+    - name: Validate new_reviews
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}   
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        bundle exec script/validate-new-reviews
+    - name: Process new_reviews
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}   
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        bundle exec script/process-new-reviews
+    - name: Commit to GitHub
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add _repos
+        git commit -m "add new _repos" || echo "nothing to commit"
+        git add _authors
+        git commit -m "add new _authors" || echo "nothing to commit"
+        git add _reviews
+        git commit -m "add new _reviews" || echo "nothing to commit"
+        if ! find new_reviews/*.md -maxdepth 1 -type f | xargs git rm; then
+          echo 'no *.md files in new_reviews'
+        fi
+        git commit -m "remove new_reviews/*.md" || echo "nothing to remove"
+        git status
+        git fetch
+        git push origin HEAD:main
+    - name: Build and test site
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}   
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: bundle exec jekyll build
+

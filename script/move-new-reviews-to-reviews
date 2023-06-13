@@ -1,0 +1,66 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'json'
+require 'front_matter_parser'
+require 'date'
+
+ghc = JSON.parse(ENV['GITHUB_CONTEXT'])
+puts "REPO OWNER: #{ghc['repository_owner']}"
+puts "FROM SHA: #{ghc['event']['before']}"
+puts "TO SHA: #{ghc['sha']}"
+puts "ACTOR: #{ghc['actor']}"
+
+# set author as github actor and date_today as yyyy-mm-dd
+author = ghc['actor']
+date_today = Date.today.to_s
+
+# Process the new_reviews/ directory
+
+files = Dir["#{File.expand_path('../new_reviews/', File.dirname(__FILE__))}/*.md"]
+
+files.each do |file|
+
+  puts "processing new_reviews file: " + file
+
+  contents = File.read(file)
+
+  pfm = FrontMatterParser::Parser.parse_file(file)
+
+  # create new review in _reviews
+  review_basename = date_today + '_' + author + '_' + pfm['repository_owner'] + '_' + pfm['repository_name'] + ".md"
+  puts review_basename
+
+  reviews_path = "#{File.expand_path('../_reviews/', File.dirname(__FILE__))}"
+  puts reviews_path
+
+  new_review_file = reviews_path + "/" + review_basename
+  puts new_review_file
+
+  contents = <<-END
+---
+layout: review
+repository_owner: #{pfm['repository_owner']}
+repository_name: #{pfm['repository_name']}
+review_title: #{pfm['review_title']}
+author: #{author}
+date: #{date_today}
+---
+#{pfm.content}
+END
+
+  puts contents
+
+  File.open(new_review_file, "w")
+
+  File.write(new_review_file, contents)
+
+  puts `ls #{new_review_file}`
+  puts `cat #{new_review_file}`
+
+  # validate _author page exists, if not create one
+
+end
+
+puts "Finishing up ... "
+

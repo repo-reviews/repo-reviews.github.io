@@ -1,0 +1,27 @@
+---
+layout: home
+title: Repos
+description: All repos
+permalink: /repos
+---
+
+<section class="container-lg p-responsive py-5 py-md-6 my-lg-6">
+  <p class="text-center">
+    Repo stars don't tell the whole story, so support the community with a helpful ❤️ repo review ❤️
+  </p>  
+  <p class="text-center">
+    <a href="https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md" target="_blank" class="btn btn-outline">Create a review&rarr;</a>
+  </p>
+</section>
+
+
+<section class="">
+  <div class="container-lg p-responsive py-5 py-md-6 ">
+    <h2 class="alt-h2 text-center mb-3 mt-lg-6" id="testing">Repos Reviewed</h2>
+  <div>
+    {% for repo in site.repos %}
+    <li>[<a href="https://repo-reviews.github.io/repos/{{repo.repository_owner}}_{{repo.repository_name}}">{{ repo.repository_owner }}/{{ repo.repository_name }}</a>]</li>
+    {% endfor %}
+  </div>
+</section>
+

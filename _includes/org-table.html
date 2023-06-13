@@ -1,0 +1,44 @@
+<div class="">
+  <div class="org-include" id="include-{{ include.id }}">
+
+    <h2 class="alt-h2 mb-3" id="{{ include.id }}">{{ include.name }}</h2>
+    <span class="no-matches">No matches.</span>
+
+    {% assign columns = 4 %}
+    {% for type_hash in include.orgs %}
+      {% assign slug = type_hash[0] | downcase | replace: ' ','-' | replace: '.','' %}
+      <div class="org-type clearfix" id="type-{{ include.id }}-{{ slug }}">
+        <h3 class="alt-h3 mb-3" id="{{ include.id }}-{{ slug }}">{{ type_hash[0] }} ({{ type_hash[1] | size }})</h3>
+
+        <div class="orgs">
+          {% for org in type_hash[1] %}
+
+            {% assign column_number = forloop.index0 | modulo:columns %}
+            {% if column_number == 0 %}
+              <div class="org-row clearfix gutter">
+            {% endif %}
+
+            <div class="col-sm-3 float-left org">
+              <a href="https://github.com/{{ org }}" title="{{ org }}" class="border d-block text-center px-2 py-4 mb-4">
+                {% avatar user=org size=60 lazy=true %}
+                <div class="org-name text-small">
+                  @{{ org }}
+                </div>
+              </a>
+            </div><!-- col-md-{{ 12 | divided_by:columns }} -->
+
+            {% if column_number == 3 %}
+              </div><!-- row because column_number -->
+            {% endif %}
+          {% endfor %}<!-- loop orgs -->
+
+          {% if column_number != 3 %}
+            </div><!-- row because end of group -->
+          {% endif %}
+
+        </div><!-- orgs -->
+
+      </div><!-- org-type -->
+    {% endfor %}<!-- loop types -->
+  </div><!-- org-include -->
+</div><!-- mini-section -->

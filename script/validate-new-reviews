@@ -1,0 +1,84 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'json'
+require 'typhoeus'
+require 'front_matter_parser'
+require 'date'
+
+ghc = JSON.parse(ENV['GITHUB_CONTEXT'])
+puts "REPO OWNER: #{ghc['repository_owner']}"
+puts "FROM SHA: #{ghc['event']['before']}"
+puts "TO SHA: #{ghc['sha']}"
+puts "ACTOR: #{ghc['actor']}"
+
+# set author as github actor and date_today as yyyy-mm-dd
+author = ghc['actor']
+date_today = Date.today.to_s
+
+# validate only files changed are in new_reviews
+
+# Process the new_reviews/ directory
+
+files = Dir["#{File.expand_path('../new_reviews/', File.dirname(__FILE__))}/*.md"]
+
+files.each do |file|
+
+  puts "processing new_reviews file: " + file
+
+  contents = File.read(file)
+
+  pfm = FrontMatterParser::Parser.parse_file(file)
+
+  # check front matter
+  puts 'checking review markdown formatting ...'
+  success = 1
+
+  has_yaml_front_matter = /---.*---/m.match?(contents)
+  unless has_yaml_front_matter
+    puts '... must contain YAML front matter within ---'
+    success = 0
+  end
+
+  has_repo_owner = /---.*repository_owner:.*---/m.match?(contents)
+  unless has_repo_owner
+    puts '... YAML front matter must contain "repository_owner: " field'
+    success = 0
+  end
+
+  has_repo_name = /---.*repository_name:.*---/m.match?(contents)
+  unless has_repo_name
+    puts '... YAML front matter must contain "repository_name: " field'
+    success = 0
+  end
+
+  has_review_title = /---.*review_title:.*---/m.match?(contents)
+  unless has_review_title
+    puts '... YAML front matter must contain "review_title: " field'
+    success = 0
+  end
+
+  unless success == 1
+    puts 'ERROR: review incorrectly formatted:'
+    puts '  see new_reviews/template/review_template.md for example'
+    exit 1
+  end
+
+  # validate repo exists
+  puts "validating https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']} exists..."
+  response = Typhoeus.head "https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']}", accept_encoding: 'gzip'
+  puts "response.success: #{response.success?}, with code: #{response.response_code}"
+  if response.success? || response.response_code == 200
+    puts "success! repo exists"
+  else
+    puts "response failed from https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']}"
+    puts "check repository_owner and repository_name"
+    exit 1
+  end
+
+  # validate author has not reviewed this repo previously
+
+end
+
+puts "Finishing up ... "
+
