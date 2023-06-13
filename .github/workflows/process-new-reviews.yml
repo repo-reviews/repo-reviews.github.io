@@ -35,6 +35,10 @@ jobs:
       run: |
         bundle exec script/process-new-reviews
         echo "action_state=yellow" >> "$GITHUB_ENV"
+        echo "setting review author env variable"
+        cat ENV_REVIEW_AUTHOR
+        echo "review_author=`cat ENV_REVIEW_AUTHOR`"
+        echo "review_author=`cat ENV_REVIEW_AUTHOR`" >> "$GITHUB_ENV"
     - name: Commit to GitHub
       run: |
         git config user.name github-actions
