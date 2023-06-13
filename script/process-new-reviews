@@ -132,10 +132,10 @@ END
 
   end
 
-#  puts `ls -la ./script/notify_repo_via_issue.sh`
-#  puts '----------------------------------------'
-#  puts "running ./script/create_issue.sh"
-#  puts `./script/create_issue.sh`
+#puts `ls -la ./script/notify_repo_via_issue.sh`
+puts '----------------------------------------'
+puts "running ./script/create_issue.sh"
+puts `./script/create_issue.sh`
 #  puts '----------------------------------------'
 #  puts "running ./script/notify_repo_via_issue.sh"
 #  puts `./script/notify_repo_via_issue.sh #{ENV['GITHUB_TOKEN']} #{pfm['repository_owner']} #{pfm['repository_name']} #{author} #{new_review_file}`
