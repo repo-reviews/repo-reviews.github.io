@@ -2,15 +2,18 @@
 title: Review next steps
 labels: review-created
 ---
-Someone just pushed a new review. Here's who did it: {{ payload.sender.login }}.
 
-actor: @{{actor}}
+## Thank you for your review!
 
-ENV
-sha: @{{ env.GITHUB_SHA }}
-action_state: @{{ env.action_state }}
+@{{ env.review_author }}, you are helping to support the community with a helpful ❤️ repo review ❤️  
 
 review_repository_owner: @{{ env.review_repository_owner }}
-review_repository_name: {{ env.review_repository_name }}
+review_repository_name: [{{ env.review_repository_name }}](https://github.com/{{ env.review_repository_owner }}/{{ env.review_repository_name }})
 review_author: @{{ env.review_author }}
-review_file: {{ env.review_file }}
+review_file: [{{ env.review_file }}](https://repo-reviews.github.io/reviews/{{ env.review_file }})
+review_file (GitHub): [{{ env.review_file }}](https://github.com/repo-reviews/repo-reviews.github.io/_reviews/{{ env.review_file }})
+
+## Spread the word
+
+Please click [here](https://github.com/{{ env.review_repository_owner }}/{{ env.review_repository_name }}/issues/new/body=test) to notify the reviewed repo of your supportive review.
+
