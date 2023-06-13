@@ -18,6 +18,10 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
     - name: Validate new_reviews
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}   
@@ -47,6 +51,13 @@ jobs:
         git status
         git fetch
         git push origin HEAD:main
+    - name: Create next steps issue
+      - uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/ISSUE_TEMPLATE_REVIEW_CREATED.md
     - name: Build and test site
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}   
