@@ -3,7 +3,7 @@ on:
   push:
     paths:
       - "_reviews/*.md"
-name: Review created creates new issue
+name: Review created to issue
 permissions:
   contents: read
   issues: write 
