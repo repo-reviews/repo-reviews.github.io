@@ -67,7 +67,8 @@ files.each do |file|
   pfm = FrontMatterParser::Parser.parse_file(file)
 
   # create new review in _reviews
-  review_basename = date_today + '_' + author + '_' + pfm['repository_owner'] + '_' + pfm['repository_name'] + ".md"
+  review_basename_no_md = date_today + '_' + author + '_' + pfm['repository_owner'] + '_' + pfm['repository_name'] 
+  review_basename = review_basename_no_md + ".md"
   puts review_basename
 
   reviews_path = "#{File.expand_path('../_reviews/', File.dirname(__FILE__))}"
@@ -159,7 +160,7 @@ File.write(var_file, "#{author}")
 puts `*************** WRITING ENV_REVIEW_FILE FILE **************`
 var_file = "ENV_REVIEW_FILE"
 File.open(var_file, "w")
-File.write(var_file, "#{review_basename}")
+File.write(var_file, "#{review_basename_no_md}")
 
 end
 
