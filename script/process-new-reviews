@@ -159,9 +159,7 @@ File.write(var_file, "#{author}")
 puts `*************** WRITING ENV_REVIEW_FILE FILE **************`
 var_file = "ENV_REVIEW_FILE"
 File.open(var_file, "w")
-File.write(var_file, "#{new_review_file}")
-
-
+File.write(var_file, "#{review_basename}")
 
 end
 
