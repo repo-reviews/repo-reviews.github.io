@@ -141,13 +141,13 @@ END
 #  puts `./script/notify_repo_via_issue.sh #{ENV['GITHUB_TOKEN']} #{pfm['repository_owner']} #{pfm['repository_name']} #{author} #{new_review_file}`
 #  puts '----------------------------------------'
 
-puts `*************** WRITING ENV_REPOSITORY_OWNER FILE **************`
-var_file = "ENV_REPOSITORY_OWNER"
+puts `*************** WRITING ENV_REVIEW_REPOSITORY_OWNER FILE **************`
+var_file = "ENV_REVIEW_REPOSITORY_OWNER"
 File.open(var_file, "w")
 File.write(var_file, "#{pfm['repository_owner']}")
 
-puts `*************** WRITING ENV_REPOSITORY_NAME FILE **************`
-var_file = "ENV_REPOSITORY_NAME"
+puts `*************** WRITING ENV_REVIEW_REPOSITORY_NAME FILE **************`
+var_file = "ENV_REVIEW_REPOSITORY_NAME"
 File.open(var_file, "w")
 File.write(var_file, "#{pfm['repository_name']}")
 
