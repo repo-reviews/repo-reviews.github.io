@@ -56,7 +56,7 @@ We welcome your contributions!
 #echo "******************** IN notify_repo_via_issue.sh: ******************"
 #echo "$BODY_RAW"
 
-#BODY=`echo "$BODY_RAW" | jq -Rsa .`
+BODY=`echo "$BODY_RAW" | jq -Rsa .`
 
 #echo "$BODY"
 
