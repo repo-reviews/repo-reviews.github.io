@@ -141,6 +141,13 @@ END
 #  puts `./script/notify_repo_via_issue.sh #{ENV['GITHUB_TOKEN']} #{pfm['repository_owner']} #{pfm['repository_name']} #{author} #{new_review_file}`
 #  puts '----------------------------------------'
 
+puts `*************** WRITING ENV_REVIEW_AUTHOR FILE **************`
+var_file = "ENV_REVIEW_AUTHOR"
+File.open(var_file, "w")
+File.write(var_file, "#{author}")
+puts `ls #{var_file}`
+puts `cat #{var_file}`
+
 end
 
 puts "Finishing up ... "
