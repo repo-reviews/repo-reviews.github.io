@@ -12,5 +12,5 @@ action_state: @{{ env.action_state }}
 
 review_repository_owner: @{{ env.review_repository_owner }}
 review_repository_name: {{ env.review_repository_name }}
-review_author: {{ env.review_author }}
+review_author: @{{ env.review_author }}
 review_file: {{ env.review_file }}
