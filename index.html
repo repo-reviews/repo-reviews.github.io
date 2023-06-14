@@ -17,10 +17,10 @@ permalink: /
 
 <section class="">
   <div class="container-lg p-responsive py-5 py-md-6 ">
-    <h2 class="alt-h2 text-center mb-3 mt-lg-6" id="testing">Recent Reviews (in beta!)</h2>
+    <h2 class="alt-h2 text-center mb-3 mt-lg-6" id="testing">We are in beta!</h2>
   <div>
     {% assign sorted = site.reviews | reverse %}
-    {% for review in sorted limit:10 %}
+    {% for review in sorted limit:5 %}
     <li>[<a href="https://repo-reviews.github.io/repos/{{review.repository_owner}}_{{review.repository_name}}">{{ review.repository_owner }}/{{ review.repository_name }}</a>] <a href="https://repo-reviews.github.io/authors/{{review.author_github_id}}">@{{ review.author_github_id}}</a> - <a href="https://repo-reviews.github.io/{{review.url | relative_url}}">{{ review.review_title }}</a></li>
     {% endfor %}
   </div>
