@@ -21,7 +21,7 @@ permalink: /
   <div>
     {% assign sorted = site.reviews | reverse %}
     {% for review in sorted limit:10 %}
-    <li>{{ review.date | date: "%Y-%m-%d"}} [<a href="https://repo-reviews.github.io/repos/{{review.repository_owner}}_{{review.repository_name}}">{{ review.repository_owner }}/{{ review.repository_name }}</a>] <a href="https://repo-reviews.github.io/authors/{{review.author_github_id}}">@{{ review.author_github_id}}</a> - <a href="https://repo-reviews.github.io/{{review.url | relative_url}}">{{ review.review_title }}</a></li>
+    <li>[<a href="https://repo-reviews.github.io/repos/{{review.repository_owner}}_{{review.repository_name}}">{{ review.repository_owner }}/{{ review.repository_name }}</a>] <a href="https://repo-reviews.github.io/authors/{{review.author_github_id}}">@{{ review.author_github_id}}</a> - <a href="https://repo-reviews.github.io/{{review.url | relative_url}}">{{ review.review_title }}</a></li>
     {% endfor %}
   </div>
 </section>
