@@ -34,9 +34,14 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         bundle exec script/process-new-reviews
-        echo "cat ENV_REVIEW_CREATED_ISSUE_CONTENT"
-        cat ENV_REVIEW_CREATED_ISSUE_CONTENT
-        echo "review_created_issue_content='`cat ENV_REVIEW_CREATED_ISSUE_CONTENT`'" >> "$GITHUB_ENV"
+        echo "action_state=yellow" >> "$GITHUB_ENV"
+        echo "setting review author env variable"
+        cat ENV_REVIEW_AUTHOR
+        echo "review_author=`cat ENV_REVIEW_AUTHOR`"
+        echo "review_author=`cat ENV_REVIEW_AUTHOR`" >> "$GITHUB_ENV"
+        echo "review_repository_owner=`cat ENV_REVIEW_REPOSITORY_OWNER`" >> "$GITHUB_ENV"
+        echo "review_repository_name=`cat ENV_REVIEW_REPOSITORY_NAME`" >> "$GITHUB_ENV"
+        echo "review_file=`cat ENV_REVIEW_FILE`" >> "$GITHUB_ENV"
     - name: Commit to GitHub
       run: |
         git config user.name github-actions
