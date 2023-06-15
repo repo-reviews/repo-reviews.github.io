@@ -45,7 +45,7 @@ For instance, not many people need to know that [Node.js](https://github.com/nod
 
 **Note:** an *experience* is not an *issue* (*issues* should be reported via a repo's **/issues** endpoint).
 
-A **good place to start** is by revieweing [trending repositories that are under active development](https://github.com/trending).
+A **good place to start** is by reviewing [trending repositories that are under active development](https://github.com/trending).
 
 
 ## Contributing
