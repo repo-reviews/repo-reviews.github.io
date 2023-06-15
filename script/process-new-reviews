@@ -176,7 +176,7 @@ END
 END
 
 
-puts `*************** WRITING ENV_REVIEW_CREATED_ISSUE_CONTENT FILE **************`
+puts "*************** WRITING ENV_REVIEW_CREATED_ISSUE_CONTENT FILE **************"
 puts rci_content
 var_file = "ENV_REVIEW_CREATED_ISSUE_CONTENT"
 File.open(var_file, "w")

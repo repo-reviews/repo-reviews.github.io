@@ -35,7 +35,8 @@ jobs:
       run: |
         bundle exec script/process-new-reviews
         echo "cat ENV_REVIEW_CREATED_ISSUE_CONTENT"
-        echo "REVIEW_CREATED_ISSUE_CONTENT=`cat ENV_REVIEW_CREATED_ISSUE_CONTENT`" >> "$GITHUB_ENV"
+        cat ENV_REVIEW_CREATED_ISSUE_CONTENT
+        echo "REVIEW_CREATED_ISSUE_CONTENT='`cat ENV_REVIEW_CREATED_ISSUE_CONTENT`'" >> "$GITHUB_ENV"
     - name: Commit to GitHub
       run: |
         git config user.name github-actions
