@@ -160,39 +160,22 @@ END
   puts notify_body_enc
 
 
-
-#puts `ls -la ./script/notify_repo_via_issue.sh`
-#puts '----------------------------------------'
-#puts "running ./script/create_issue.sh"
-#puts `./script/create_issue.sh`
-#  puts '----------------------------------------'
-#  puts "running ./script/notify_repo_via_issue.sh"
-#  puts `./script/notify_repo_via_issue.sh #{ENV['GITHUB_TOKEN']} #{pfm['repository_owner']} #{pfm['repository_name']} #{author} #{new_review_file}`
-#  puts '----------------------------------------'
-
-puts `*************** WRITING ENV_REVIEW_REPOSITORY_OWNER FILE **************`
 var_file = "ENV_REVIEW_REPOSITORY_OWNER"
 File.open(var_file, "w")
 File.write(var_file, "#{pfm['repository_owner']}")
 
-puts `*************** WRITING ENV_REVIEW_REPOSITORY_NAME FILE **************`
 var_file = "ENV_REVIEW_REPOSITORY_NAME"
 File.open(var_file, "w")
 File.write(var_file, "#{pfm['repository_name']}")
 
-puts `*************** WRITING ENV_REVIEW_AUTHOR FILE **************`
 var_file = "ENV_REVIEW_AUTHOR"
 File.open(var_file, "w")
 File.write(var_file, "#{author}")
 
-puts `*************** WRITING ENV_REVIEW_FILE FILE **************`
 var_file = "ENV_REVIEW_FILE"
 File.open(var_file, "w")
 File.write(var_file, "#{review_basename_no_md}")
 
-
-puts "*************** WRITING ENV_REVIEW_NOTIFY_BODY_ENC FILE **************"
-puts notify_body_enc
 var_file = "ENV_REVIEW_NOTIFY_BODY_ENC"
 File.open(var_file, "w")
 File.write(var_file, "#{notify_body_enc}")
