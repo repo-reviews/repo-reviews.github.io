@@ -34,7 +34,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         bundle exec script/process-new-reviews
-        echo "REVIEW_CREATED_ISSUE_CONTENT=`cat ENV_REVIEW_REVIEW_CREATED_ISSUE_CONTENT`" >> "$GITHUB_ENV"
+        echo "cat ENV_REVIEW_CREATED_ISSUE_CONTENT"
+        echo "REVIEW_CREATED_ISSUE_CONTENT=`cat ENV_REVIEW_CREATED_ISSUE_CONTENT`" >> "$GITHUB_ENV"
     - name: Commit to GitHub
       run: |
         git config user.name github-actions

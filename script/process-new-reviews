@@ -143,7 +143,11 @@ Please be kind,
 I’m a human
 END
 
-  notify_body_ue = CGI.escape(notify_body)
+  puts notify_body
+
+  notify_body_enc = CGI.escape(notify_body)
+
+  puts notify_body_enc
 
   # create the review created issue content to describe next
   # steps in an issue
@@ -154,7 +158,7 @@ END
 
 ## Spread the word
 
-[Support](https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']}/issues/new?body=#{notify_body_ue}&title=test) the community by sharing your experience ❤️   
+[Support](https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']}/issues/new?body=#{notify_body_enc}&title=test) the community by sharing your experience ❤️   
 
 ## Thank you for your review!
 
@@ -173,6 +177,7 @@ END
 
 
 puts `*************** WRITING ENV_REVIEW_CREATED_ISSUE_CONTENT FILE **************`
+puts rci_content
 var_file = "ENV_REVIEW_CREATED_ISSUE_CONTENT"
 File.open(var_file, "w")
 File.write(var_file, "#{rci_content}")
