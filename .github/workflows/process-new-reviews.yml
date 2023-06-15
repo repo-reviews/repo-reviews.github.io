@@ -42,6 +42,7 @@ jobs:
         echo "review_repository_owner=`cat ENV_REVIEW_REPOSITORY_OWNER`" >> "$GITHUB_ENV"
         echo "review_repository_name=`cat ENV_REVIEW_REPOSITORY_NAME`" >> "$GITHUB_ENV"
         echo "review_file=`cat ENV_REVIEW_FILE`" >> "$GITHUB_ENV"
+        echo "review_notify_body_enc=`cat ENV_REVIEW_NOTIFY_BODY_ENC`" >> "$GITHUB_ENV"
     - name: Commit to GitHub
       run: |
         git config user.name github-actions

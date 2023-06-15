@@ -5,6 +5,7 @@ require 'json'
 require 'typhoeus'
 require 'front_matter_parser'
 require 'date'
+require 'cgi'
 
 ghc = JSON.parse(ENV['GITHUB_CONTEXT'])
 puts "REPO OWNER: #{ghc['repository_owner']}"
@@ -133,6 +134,23 @@ END
 
   end
 
+  # first create the contents for the notify issue
+  # that will be passed through the url body variable
+  # this needs to be url encoded
+    notify_body = <<-END
+---
+Please be kind,
+I’m a human
+END
+
+  puts notify_body
+
+  notify_body_enc = CGI.escape(notify_body)
+
+  puts notify_body_enc
+
+
+
 #puts `ls -la ./script/notify_repo_via_issue.sh`
 #puts '----------------------------------------'
 #puts "running ./script/create_issue.sh"
@@ -161,6 +179,14 @@ puts `*************** WRITING ENV_REVIEW_FILE FILE **************`
 var_file = "ENV_REVIEW_FILE"
 File.open(var_file, "w")
 File.write(var_file, "#{review_basename_no_md}")
+
+
+puts "*************** WRITING ENV_REVIEW_NOTIFY_BODY_ENC FILE **************"
+puts notify_body_enc
+var_file = "ENV_REVIEW_NOTIFY_BODY_ENC"
+File.open(var_file, "w")
+File.write(var_file, "#{notify_body_enc}")
+
 
 end
 
