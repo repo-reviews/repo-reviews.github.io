@@ -8,7 +8,7 @@ The community needs your help!  Support them by [sharing](https://github.com/{{ 
 
 ## Thank you for your review!
 
-@{{ env.review_author }}, you are helping to support the community with a helpful ❤️ repo review ❤️  
+You are helping to support the community with a helpful ❤️ repo review ❤️  
 
 
 --
