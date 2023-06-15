@@ -66,7 +66,7 @@ files.each do |file|
   contents = File.read(file)
 
   pfm = FrontMatterParser::Parser.parse_file(file)
-
+  
   # create new review in _reviews
   review_basename_no_md = date_today + '_' + author + '_' + pfm['repository_owner'] + '_' + pfm['repository_name'] 
   review_basename = review_basename_no_md + ".md"
@@ -140,13 +140,23 @@ END
     notify_body = <<-END
 ### Thank you for building **#{pfm['repository_name']}**!
 
-I [created a review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) on [repo-reviews.github.io](https://repo-reviews.github.io) to share my experience using **#{pfm['repository_name']}**.
+I created the following review on [repo-reviews.github.io](https://repo-reviews.github.io) to share my experience using **#{pfm['repository_name']}**.
 
-You can read my experience [here](https://repo-reviews.github.io//reviews/#{review_basename_no_md}).
+### Review
+
+**Title**: #{pfm['review_title']}
+
+----
+
+#{pfm.content}
+
+----
+
+[link to review](https://repo-reviews.github.io//reviews/#{review_basename_no_md}).
 
 If you would like to help your users share their experiences using your repo, add a [badge](https://github.com/repo-reviews/repo-reviews.github.io#add-badges) to your README.md.
 
-I hope the learnings I've shared help the users of #{pfm['repository_name']} **increase their productivity**.
+I hope these learnings help **increase productivity**!
 
 --
 Please be kind,
