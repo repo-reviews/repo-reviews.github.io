@@ -5,6 +5,7 @@ require 'json'
 require 'typhoeus'
 require 'front_matter_parser'
 require 'date'
+require 'cgi'
 
 ghc = JSON.parse(ENV['GITHUB_CONTEXT'])
 puts "REPO OWNER: #{ghc['repository_owner']}"

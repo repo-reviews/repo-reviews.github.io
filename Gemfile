@@ -17,4 +17,5 @@ group :development, :test do
   gem 'rubocop'
   gem 'typhoeus'
   gem 'front_matter_parser'
+  gem 'cgi'
 end
