@@ -43,7 +43,7 @@ The best reviews share insights that are not widely known by the majority of the
 
 For instance, not many people need to know that [Node.js](https://github.com/nodejs/node) is a great JavaScript runtime and that it is easy to set up.  Is there something about a particular implementation that you have discovered through experience that would help the community?  Perhaps there's an alternative, or a configuration that works well... or doesn't.
 
-Great reviews often result from the ✨ in: 🤓😓😓😓❤️😓😓😓💪😓😓😓✨✨😃🚀
+Great reviews often result from the ✨ in: 😓😓😓❤️😓😓😓💪😓😓😓✨✨🤓🚀
 
 **Note:** an *experience* is not an *issue* (*issues* should be reported via a repo's **/issues** endpoint).
 
