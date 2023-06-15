@@ -4,7 +4,7 @@ labels: review-created
 ---
 ## Spread the word
 
-[Support](https://github.com/{{ env.review_repository_owner }}/{{ env.review_repository_name }}/issues/new?body={{ env.review_notify_body_enc }}&title=test) the community by sharing your experience ❤️   
+The community needs your help!  Support them by [sharing](https://github.com/{{ env.review_repository_owner }}/{{ env.review_repository_name }}/issues/new?body={{ env.review_notify_body_enc }}&title=Review+added) your [experience](https://repo-reviews.github.io/reviews/{{ env.review_file }}) ❤️   
 
 ## Thank you for your review!
 
