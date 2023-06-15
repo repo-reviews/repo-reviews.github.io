@@ -152,11 +152,11 @@ I created the following review on [repo-reviews.github.io](https://repo-reviews.
 
 ----
 
-[link to review](https://repo-reviews.github.io//reviews/#{review_basename_no_md}).
+[link to review](https://repo-reviews.github.io//reviews/#{review_basename_no_md})
 
 If you would like to help your users share their experiences using your repo, add a [badge](https://github.com/repo-reviews/repo-reviews.github.io#add-badges) to your README.md.
 
-I hope these learnings help **increase productivity**!
+I hope these learnings help your users **increase their productivity**.
 
 --
 Please be kind,
