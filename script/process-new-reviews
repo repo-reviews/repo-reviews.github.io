@@ -133,34 +133,49 @@ END
 
   end
 
-#puts `ls -la ./script/notify_repo_via_issue.sh`
-#puts '----------------------------------------'
-#puts "running ./script/create_issue.sh"
-#puts `./script/create_issue.sh`
-#  puts '----------------------------------------'
-#  puts "running ./script/notify_repo_via_issue.sh"
-#  puts `./script/notify_repo_via_issue.sh #{ENV['GITHUB_TOKEN']} #{pfm['repository_owner']} #{pfm['repository_name']} #{author} #{new_review_file}`
-#  puts '----------------------------------------'
+  # first create the contents for the notify issue
+  # that will be passed through the url body variable
+  # this needs to be url encoded
+    notify_body = <<-END
+---
+Please be kind,
+I’m a human
+END
 
-puts `*************** WRITING ENV_REVIEW_REPOSITORY_OWNER FILE **************`
-var_file = "ENV_REVIEW_REPOSITORY_OWNER"
-File.open(var_file, "w")
-File.write(var_file, "#{pfm['repository_owner']}")
+  notify_body_ue = CGI.escape(notify_body)
 
-puts `*************** WRITING ENV_REVIEW_REPOSITORY_NAME FILE **************`
-var_file = "ENV_REVIEW_REPOSITORY_NAME"
-File.open(var_file, "w")
-File.write(var_file, "#{pfm['repository_name']}")
+  # create the review created issue content to describe next
+  # steps in an issue
+  # this will get written to an environment variable
+  # that is then read by the GitHub workflow and swapped into
+  # the content of .github/ISSUE_TEMPLATE_REVIEW_CREATED.md
+    rci_content = <<-END
 
-puts `*************** WRITING ENV_REVIEW_AUTHOR FILE **************`
-var_file = "ENV_REVIEW_AUTHOR"
-File.open(var_file, "w")
-File.write(var_file, "#{author}")
+## Spread the word
 
-puts `*************** WRITING ENV_REVIEW_FILE FILE **************`
-var_file = "ENV_REVIEW_FILE"
+[Support](https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']}/issues/new?body=#{notify_body_ue}&title=test) the community by sharing your experience ❤️   
+
+## Thank you for your review!
+
+@#{author}, you are helping to support the community with a helpful ❤️ repo review ❤️  
+
+
+--
+**Details**
+**Repo Owner**: @#{pfm['repository_owner']}
+**Repo Name**: [#{pfm['repository_name']}](https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']})
+**Author**: @#{author}
+**File**: [link](https://repo-reviews.github.io/reviews/#{review_basename_no_md})
+**Source**: [link](https://github.com/repo-reviews/repo-reviews.github.io/tree/main/_reviews/#{review_basename_no_md}.md)
+
+END
+
+
+puts `*************** WRITING ENV_REVIEW_CREATED_ISSUE_CONTENT FILE **************`
+var_file = "ENV_REVIEW_CREATED_ISSUE_CONTENT"
 File.open(var_file, "w")
-File.write(var_file, "#{review_basename_no_md}")
+File.write(var_file, "#{rci_content}")
+
 
 end
 
