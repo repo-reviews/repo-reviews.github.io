@@ -1,10 +1,8 @@
 # Repo Reviews [![pages-build-deployment](https://github.com/repo-reviews/repo-reviews.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/repo-reviews/repo-reviews.github.io/actions/workflows/pages/pages-build-deployment) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=repo-reviews)
 
-| [Project Source](https://github.com/repo-reviews/repo-reviews.github.io) | [Website](https://repo-reviews.github.io) |
+| [Project Source](https://github.com/repo-reviews/repo-reviews.github.io) | [Website](https://repo-reviews.github.io) | [Create a review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) |
 
 Support the community with a helpful ❤️ [repo review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) ❤️
-
-### Contribute your first [review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md).
 
 ## About
 
@@ -16,11 +14,6 @@ Support the community with a helpful ❤️ [repo review](https://github.com/rep
 *GitHub repos don’t include stories of user experiences.*
 
 *Sharing these stories can avoid rabbit-holes and save time, greatly increasing productivity across the community.*
-
-
-## Create a review
-
-Click [**here**](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) to create a review.
 
 ## Add badges
 
@@ -42,22 +35,17 @@ Click [**here**](https://github.com/repo-reviews/repo-reviews.github.io/blob/mai
 
 - **Pro-tip:** Modify the above code to link directly to your repo's reviews with: `https://repo-reviews.github.io/repos/{REPO_OWNER}_{REPO_NAME}`.
 
-
-## View Repo-Reviews
-
-Visit https://repo-reviews.github.io/ to view Repo-Reviews ❤️
-
 ## Contributing
 
 The site is open source (here's all the code!) and is a tool _for_ and _by_ the community.
 
 Submit [issues](https://github.com/repo-reviews/repo-reviews.github.io/issues/new) and [pull requests](https://github.com/repo-reviews/repo-reviews.github.io/compare/) for reviews, site ideas or copy edits.
 
+We are actively interviewing developers (ruby/jekyll) and moderators.  Interested?  Post an issue and we will reach out.
+
 ### Under the Hood
 
 This site is made with [Jekyll](https://jekyllrb.com), an open source static site generator. This means the Jekyll program takes the content we want to be on the site and turns them into HTML files ready to be hosted somewhere. Awesomely, GitHub provides free web hosting for repositories, called [GitHub Pages](https://pages.github.com/), and that's how this site is hosted. 
-
-Don't see what you're looking for? Create an [issue](https://github.com/repo-reviews/repo-reviews.github.io/issues/new), we'll do our best to help you out.
 
 ## Credit
 
