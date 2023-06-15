@@ -138,9 +138,9 @@ END
   # that will be passed through the url body variable
   # this needs to be url encoded
     notify_body = <<-END
-### Hi @#{pfm['repository_owner']}.  Thank you for building **#{pfm['repository_name']}**!
+### Thank you for building **#{pfm['repository_name']}**!
 
-I [created a review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) on repo-reviews.github.io to share my experience using **#{pfm['repository_name']}**.
+I [created a review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) on [repo-reviews.github.io](https://repo-reviews.github.io) to share my experience using **#{pfm['repository_name']}**.
 
 You can read my experience [here](https://repo-reviews.github.io//reviews/#{review_basename_no_md}).
 
@@ -148,7 +148,9 @@ If you would like to help your users share their experiences using your repo, ad
 
 I hope the learnings I've shared help the users of #{pfm['repository_name']} **increase their productivity**.
 
-Please be kind, I’m a human!
+--
+Please be kind,
+I’m a human!
 END
 
   puts notify_body
