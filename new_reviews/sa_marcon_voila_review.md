@@ -22,4 +22,6 @@ Personally, I feel that this has enornous potential as a productivity booster. S
 
 ## Installation
 
+The installation is straightforward as can be seen in the image below.
+
 ![image](https://github.com/repo-reviews/repo-reviews.github.io/assets/60097529/a10b4e35-a542-486a-9227-fdd155d86426)
