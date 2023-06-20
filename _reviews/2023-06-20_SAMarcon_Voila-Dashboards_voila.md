@@ -41,14 +41,14 @@ Please note that there are a number of packages that you need in order to fully 
 There is an extensive set of examples under the [notebooks]((https://github.com/voila-dashboards/voila/tree/main/notebooks)) folder. They are quick to run, allowing a person
 to get a good idea of how to use voilà. Personally, I also ran my own example using the classical iris dataset (please see below).
 
-<img src="https://github.com/SAMarcon/repo-reviews.github.io/assets/60097529/f4c6fe6b-09db-4a95-8a3d-a063f09e2480" width="500">
+<img src="https://github.com/SAMarcon/repo-reviews.github.io/assets/60097529/f4c6fe6b-09db-4a95-8a3d-a063f09e2480" width="600">
 
 For the examples, I liked the following:
 
 
   - [mimerenderers.ipynb](https://github.com/voila-dashboards/voila/blob/main/notebooks/mimerenderers.ipynb): This example shows that person can use a variety of different outputs in a jupyter notebook. In particular, it also displays mathematical equations very well. In this instance, [IPython](https://ipython.org/) is used to produce the desired outputs. Hence, this is another package to keep in mind when using voilà.
   - There are also a couple of examples where multiple widgets are used, namely [mutiple_widgets.ipynb](https://github.com/voila-dashboards/voila/blob/main/notebooks/multiple_widgets.ipynb) and [gridspecLayout.ipynb](https://github.com/voila-dashboards/voila/blob/main/notebooks/gridspecLayout.ipynb). Please see the image below which is an example of an output from gridspecLayout.ipynb.
-    <img width="500" alt="gridspecLayout_multiplications" src="https://github.com/SAMarcon/repo-reviews.github.io/assets/60097529/1ca8f1f6-6b17-4a0f-ab15-ba127843816a">
+    <img width="600" alt="gridspecLayout_multiplications" src="https://github.com/SAMarcon/repo-reviews.github.io/assets/60097529/1ca8f1f6-6b17-4a0f-ab15-ba127843816a">
 
 
 ## Concerns
