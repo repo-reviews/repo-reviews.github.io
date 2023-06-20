@@ -1,7 +1,7 @@
 ---
-Repository Owner: Voila-Dashboards
-Repository Name: voila
-Review Title: Reviewing Viola for Python
+repository_owner: Voila-Dashboards
+repository_name: voila
+review_title: Reviewing Viola for Python
 ---
 
 <a href='https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md' target="_blank"><img alt='Github' src='https://img.shields.io/badge/review-100000?style=flat&logo=Github&logoColor=white&labelColor=888888&color=555555'/></a>
