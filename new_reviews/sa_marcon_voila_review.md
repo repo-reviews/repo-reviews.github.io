@@ -21,7 +21,7 @@ Personally, I feel that this has great potential as a "productivity booster". So
 - Main idea of utilization
 - Personal experience using the package
 
-## README
+## The README file
 
 Firstly, I have to compliment the README of this repository. For me, it is visually engaging indicating some of the key points like installation and execution via the commandline. Perhaps, some may not like running it in this manner, but I find no issue with it. Moreover, there is also a link to the voilà's documentation (please see the following link [https://voila.readthedocs.io/](https://voila.readthedocs.io/)). If a person would like to contribute to this package, you can find the following [link](https://github.com/voila-dashboards/voila/blob/main/CONTRIBUTING.md) on the README--please see image below.
 
