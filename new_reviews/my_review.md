@@ -1,6 +1,6 @@
 ---
-repository_owner: AuroraCoboAguilera
-repository_name: huggingface
+repository_owner: huggingface
+repository_name: transformers
 review_title: Hugging face, the accelerator to develop your own NLP
 ---
 
