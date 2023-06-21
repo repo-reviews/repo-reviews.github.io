@@ -142,7 +142,7 @@ END
 
 I created a review titled:
 
-#{pfm['review_title']}
+*#{pfm['review_title']}*
 
 on [repo-reviews.github.io](https://repo-reviews.github.io) to share my experience using **#{pfm['repository_name']}**.
 
