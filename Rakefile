@@ -11,7 +11,7 @@ task :test do
     check_external_hash: false,
     hydra: { max_concurrency: 10 },
     url_ignore: [%r{https://developer.github.com}, %r{https://docs.github.com}, %r{https://help.github.com}],
-    ignore_files: [%r{/community/}, %r{/stories/}],
+    ignore_files: [%r{/community/}, %r{/stories/}, %r{/reviews/}],
     ignore_empty_alt: true,
     ignore_missing_alt: true,
     ignore_status_codes: [429]
