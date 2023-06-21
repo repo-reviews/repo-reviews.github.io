@@ -1,5 +1,5 @@
 ---
-repository_owner: community
+repository_owner: The Manim Community Dev Team
 repository_name: MainmCommunity
 review_title: Manim community review
 ---
@@ -8,7 +8,7 @@ review_title: Manim community review
 
 
 
-# Intro
+## Overview
 I’m a mathematician who has been using Manim for years to create mathematical animations :movie_camera: for my classes.  
 ManimCommunity is a community-maintained repository, which offers the implementation of the animation engine Manim, designed for the creation of explanatory math videos.
 It should be noted that there are two projects around this graphic engine:
@@ -17,6 +17,7 @@ It should be noted that there are two projects around this graphic engine:
 
 The last one is updated more frequently than the first one, and it's recommended to use this one if you'd like to use Manim for your own projects, besides the documentation is very good.
 
+## To install or not to install...
 Although the installation of Manim is well documented, and the repository provides clear instructions, installing all the dependencies has traditionally been one of the biggest problems faced by those using Manim for the first time, so here goes my recommendation:
 
 If you are familiar with Docker :whale2:, the community maintains a Docker image, which can be found at [on DockerHub](https://hub.docker.com/r/manimcommunity/manim), that you can use to render your own scenes.
@@ -29,7 +30,12 @@ docker run --rm -it  --user="$(id -u):$(id -g)" -v "$(pwd)":/manim manimcommunit
 You can even spin ap a local server running JupyterLab on whose Python kernel manin is installed.
 
 ## Documentation
-The repository has good documentation that can help most beginner projects. It has examples and the videos that those scripts generate. However, when we get into more advanced projects, we find that it is common to have to dive into the source code to find out what function you need for certain aspects of your scene.
+The repository has good documentation that can help most beginner projects. It has examples and the videos that those scripts generate, but still is a work in progress. When we get into more advanced projects, we find that it is common to have to dive into the source code to find out what function you need for certain aspects of your scene.  
+So we could say that "the documentation is very good... when there is".
+
+## OpenGl
+One of the weaknesses of the manim engine is that it runs entirely on cpu, and is very slow for long scenes. There is an intention by the developers to support rendering using OpenGl, which would give GPU support and would be equivalent to near real-time rendering, but for now we can't enjoy that feature.  
+In this sense, Grant Sanderson's original project [3b1b/manim](https://github.com/3b1b/manim), incorporated OpenGl into the manim engine some time ago, but since this repository has hardly any documentation, as it is a personal project of its creator, who decided to publish the code at the insistence of the public, it is not very advisable to install this engine in order to have OpenGl support. 
 
 If you want to try Manim because you have seen the [3Blue1Brown](https://www.youtube.com/@3blue1brown) channel videos, I recommend that you use the ManimCommunity version. Once you are comfortable with this engine, if you want to try for yourself some of the scripts used to create the vidos of that channel, you will have to install the other version ([3b1b/manim](https://github.com/3b1b/manim)).
 
