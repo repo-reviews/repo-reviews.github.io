@@ -38,6 +38,9 @@ In this sense, Grant Sanderson's original project [3b1b/manim](https://github.co
 
 If you want to try Manim because you have seen the [3Blue1Brown](https://www.youtube.com/@3blue1brown) channel videos, I recommend that you use the ManimCommunity version. Once you are comfortable with this engine, if you want to try for yourself some of the scripts used to create the vidos of that channel, you will have to install the other version ([3b1b/manim](https://github.com/3b1b/manim)).
 
+Final thoughts
+This is a great repository, with admirable work by the community, who continue to work to add new features, and fix reported bugs.  It still has room to keep growing, and hopefully we can enjoy OpenGl rendering soon.
+
+<img src="../assets/img/taylor.gif">
 
 Love this repo. Requesting approval as a reviewer.
-
