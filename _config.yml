@@ -24,11 +24,6 @@ sass:
   load_paths:
     - node_modules/
 
-# orgs on front page
-featured_orgs:
-  - gcba
-  - nla
-
 collections:
   reviews:
     output: true
