@@ -2,7 +2,7 @@
 layout: review
 repository_owner: Voila-Dashboards
 repository_name: voila
-review_title: Reviewing Viola for Python
+review_title: Reviewing Voila for Python
 author_github_id: SAMarcon
 date: 2023-06-20
 ---
