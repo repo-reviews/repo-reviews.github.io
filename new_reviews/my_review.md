@@ -4,9 +4,8 @@ repository_name: MainmCommunity
 review_title: Manim community review
 ---
 
-<p align="center"><img src="../assets/img/manim.png" width="300"></p>
 
-
+<img src="../assets/img/manim.png" width="400">
 
 ## Overview
 I’m a mathematician who has been using Manim for years to create mathematical animations :movie_camera: for my classes.  
@@ -20,7 +19,7 @@ The last one is updated more frequently than the first one, and it's recommended
 ## To install or not to install...
 Although the installation of Manim is well documented, and the repository provides clear instructions, installing all the dependencies has traditionally been one of the biggest problems faced by those using Manim for the first time, so here goes my recommendation:
 
-If you are familiar with Docker :whale2:, the community maintains a Docker image, which can be found at [on DockerHub](https://hub.docker.com/r/manimcommunity/manim), that you can use to render your own scenes.
+If you are familiar with Docker :whale2:, the community maintains a Docker image, which can be found at [on DockerHub](https://hub.docker.com/r/manimcommunity/manim), that you can use to render your own scenes :+1:.
 
 **Quick Example**
 To render a scene `CircleToSquare` ina file `test_scene.py` you can use 
@@ -41,3 +40,4 @@ If you want to try Manim because you have seen the [3Blue1Brown](https://www.you
 
 
 Love this repo. Requesting approval as a reviewer.
+
