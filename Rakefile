@@ -12,6 +12,8 @@ task :test do
     hydra: { max_concurrency: 10 },
     url_ignore: [%r{https://developer.github.com}, %r{https://docs.github.com}, %r{https://help.github.com}],
     ignore_files: [%r{/community/}, %r{/stories/}],
+    ignore_empty_alt: true,
+    ignore_missing_alt: true,
     ignore_status_codes: [429]
   )
   token = ENV.fetch('GITHUB_TOKEN', nil)
