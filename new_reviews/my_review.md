@@ -4,7 +4,7 @@ repository_name: MainmCommunity
 review_title: Manim community review
 ---
 
-<p align="center"><img src="https://github.com/pingwie/repo-reviews.github.io/assets/manim.png" width="300"></p>
+<p align="center"><img src="https://github.com/pingwie/repo-reviews.github.io/assets/img/manim.png" width="300"></p>
 
 
 
