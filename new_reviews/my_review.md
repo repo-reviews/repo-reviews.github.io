@@ -37,9 +37,9 @@ One of the weaknesses of the Manim engine is that it runs entirely on CPU, and i
 
 In this regard, Grant Sanderson's original project [3b1b/manim](https://github.com/3b1b/manim), added OpenGl into the Manim engine some time ago, but since this repository has hardly any documentation, as it is a personal project of its creator, who decided to publish the code at the insistence of the public, it is not very advisable to install this engine just to have OpenGl support.
 
-If you want to try Manim because you have seen the [3Blue1Brown](https://www.youtube.com/@3blue1brown) channel videos, I would recommend using the ManimCommunity version. Once you are comfortable with this engine, if you want to try yourself some of the scripts used to create the vidos of that channel, you will need to install the other version ([3b1b/manim](https://github.com/3b1b/manim)).
+If you want to try Manim because you have seen the [3Blue1Brown](https://www.youtube.com/@3blue1brown) channel videos, I would recommend using the ManimCommunity version. Once you are comfortable with this engine, if you want to try yourself some of the scripts used to create the videos of that channel, you will need to install the original version ([3b1b/manim](https://github.com/3b1b/manim)).
 
 ## Final thoughts
-ManimCommunity is a great repository, with a huge effort of the community behind it, who constantly works adding new features, and fixing reported bugs. It has still room to keep growing, and we will be hopefully enjoying OpenGl rendering soon.
+ManimCommunity is a great repository, with a huge effort of the community behind it, who constantly works adding new features, and fixing reported bugs. It has still room for improvement and growth, and we will be hopefully enjoying OpenGl rendering very soon.
 
 <img src="../assets/img/taylor.gif">
