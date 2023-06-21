@@ -24,7 +24,7 @@ $\hat{y} = \beta_0 + \beta_1 x_1 + ... \beta_n x_n + \epsilon$
 
 <br/><br/>
 
-Now, here's an that equation for you in Python,
+Now, here's an equation for you in Python,
 ```
 y_hat = b_0 + (b_1 * x_1) + epsilon
 ```
