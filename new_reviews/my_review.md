@@ -58,7 +58,7 @@ Overall, I had a positive experience exploring the **Hugging face** repository. 
 
 See the whole documentation in the following [link](https://huggingface.co/docs/transformers/index).
 
-![Screenshot](screenshots/Screenshot.png)
+![Screenshot]("https://github.com/repo-reviews/repo-reviews.github.io/assets/41679904/5f7d3273-4fb2-43a1-94f0-456f90b2987a")
 
 For more details and code examples, you can check out my repository with one of my PhD models: [NoRBERT](https://github.com/AuroraCoboAguilera/NoRBERT).
 
