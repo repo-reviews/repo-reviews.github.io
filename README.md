@@ -65,7 +65,3 @@ This site is made with [Jekyll](https://jekyllrb.com), an open source static sit
 ## Credit
 
 Thank you to the contributors at [government.github.com](https://github.com/github/government.github.com) for providing a framework for building this site.
-
-## License
-
-The scripts and documentation in this project are released under the [MIT License](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/LICENSE).
