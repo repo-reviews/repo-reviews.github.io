@@ -10,22 +10,25 @@ Please read our [Contributing Guide](./docs/CONTRIBUTING.md) and [Code of Conduc
 
 #### 1.) Make sure you have forked this repo first by clicking on the **Fork** button in the top right.
 
-#### 2.) Click <a href="https://github.com/repo-reviews/repo-reviews.github.io/new/main/new_reviews?filename=my_review.md&value=---%0Arepository_owner:%20repo-reviews%0Arepository_name:%20my-first-review%0Areview_title:%20This%20is%20my%20first%20review%0A---%0ALove%20this%20repo.%20Requesting%20approval%20as%20a%20reviewer." target="_blank">here</a> to create your review.
+#### 2.) Click <a href="https://github.com/repo-reviews/repo-reviews.github.io/new/main/new_reviews?filename=my_review.md&value=---%0Arepository_owner:%20repo-reviews%0Arepository_name:%20my-first-review%0Areview_title:%20This%20is%20my%20first%20review%0A---%0A-%20Please%20write%20a%20thoughtful%20review.%0A%0A-%20%60repository_owner%60%20and%20%60repository_name%60%20**must**%20reference%20a%20real%20GitHub%20repo%20link%3A%0A%20%20-%20ie.%20%60https%3A%2F%2Fgithub.com%2F%7Brepository_owner%7D%2F%7Brepository_name%7D%60%0A%0A-%20Please%20don't%20modify%20any%20files%20except%20this%20one.%0A%0A-%20To%20add%20pictures%2C%20screenshot%20them%20and%20paste%20them%20directly%20into%20this%20file.%20%20GitHub%20will%20automagically%20convert%20them%20to%20a%20unique%20local%20asset." target="_blank">here</a> to create your review.
 
 ---
 
 ### First time?
 
-- Due to [a GitHub bug](https://github.com/orgs/community/discussions/57615) you need to manually fork this repo first by clicking on the **Fork** button in the top right.
+- Due to [a GitHub bug](https://github.com/orgs/community/discussions/57615) you might need to manually fork this repo first by clicking on the **Fork** button in the top right.
 
 ![image](https://github.com/repo-reviews/repo-reviews.github.io/assets/135327276/6d926943-e09b-4961-b0b1-a64ab6ef4c1d)
 
-- After forking this repo, click <a href="https://github.com/repo-reviews/repo-reviews.github.io/new/main/new_reviews?filename=my_review.md&value=---%0Arepository_owner:%20repo-reviews%0Arepository_name:%20my-first-review%0Areview_title:%20This%20is%20my%20first%20review%0A---%0ALove%20this%20repo.%20Requesting%20approval%20as%20a%20reviewer." target="_blank">here</a> to open the review template.
+- After forking this repo, Click <a href="https://github.com/repo-reviews/repo-reviews.github.io/new/main/new_reviews?filename=my_review.md&value=---%0Arepository_owner:%20repo-reviews%0Arepository_name:%20my-first-review%0Areview_title:%20This%20is%20my%20first%20review%0A---%0A-%20Please%20write%20a%20thoughtful%20review.%0A%0A-%20%60repository_owner%60%20and%20%60repository_name%60%20**must**%20reference%20a%20real%20GitHub%20repo%20link%3A%0A%20%20-%20ie.%20%60https%3A%2F%2Fgithub.com%2F%7Brepository_owner%7D%2F%7Brepository_name%7D%60%0A%0A-%20Please%20don't%20modify%20any%20files%20except%20this%20one.%0A%0A-%20To%20add%20pictures%2C%20screenshot%20them%20and%20paste%20them%20directly%20into%20this%20file.%20%20GitHub%20will%20automagically%20convert%20them%20to%20a%20unique%20local%20asset." target="_blank">here</a> to create your review.
 
 - Add your review and edit
   - `repository_owner`
   - `repository_name`
   - `review_title`
+
+- Note: `repository_owner` and `repository_name` **must** reference a real GitHub repo link:
+  - ie. `https://github.com/{repository_owner}/{repository_name}`
 
 - Click on the green **Commit changes...** button in the top right to commit and propose the changes.
 
