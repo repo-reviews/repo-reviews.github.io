@@ -1,11 +1,11 @@
 ---
-repository_owner: The Manim Community Dev Team
-repository_name: MainmCommunity
+repository_owner: manimcommunity
+repository_name: manim
 review_title: Manim community review
 ---
 Love this repo. Requesting approval as a reviewer.
 
-<img src="../assets/img/manim.png" width="400">
+![manim](https://github.com/pingwie/repo-reviews.github.io/assets/45831026/25ce7761-f6bb-443b-8d0b-ba1fe0390aa4)
 
 ## Overview
 I’m a mathematician who has been using Manim for years to create mathematical animations :movie_camera: for my classes.  
@@ -42,4 +42,4 @@ If you want to try Manim because you have seen the [3Blue1Brown](https://www.you
 ## Final thoughts
 ManimCommunity is a great repository, with a huge effort of the community behind it, who constantly works adding new features, and fixing reported bugs. It has still room for improvement and growth, and we will be hopefully enjoying OpenGl rendering very soon.
 
-<img src="../assets/img/taylor.gif">
+![taylor](https://github.com/pingwie/repo-reviews.github.io/assets/45831026/3fecb127-4253-4657-ae2b-91f7c1d3f687)
