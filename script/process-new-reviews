@@ -140,17 +140,17 @@ END
     notify_body = <<-END
 ### Thank you for building **#{pfm['repository_name']}**!
 
-I created a review titled:
+@#{author} created a review titled:
 
 *#{pfm['review_title']}*
 
-on [repo-reviews.github.io](https://repo-reviews.github.io) to share my experience using **#{pfm['repository_name']}**.
+on [repo-reviews.github.io](https://repo-reviews.github.io) to share their experience using **#{pfm['repository_name']}**.
 
 [link to review](https://repo-reviews.github.io//reviews/#{review_basename_no_md})
 
-If you would like to help your users share their experiences using your repo, add a [badge](https://github.com/repo-reviews/repo-reviews.github.io#add-badges) to your README.md.
+If you would like to help your super-users share their experiences using your repo, add a [badge](https://github.com/repo-reviews/repo-reviews.github.io#add-badges) to your README.md.
 
-I hope these learnings help your users **increase their productivity**.
+We hope that sharing these experiences helps your users **increase their productivity**.
 
 --
 Please be kind,
