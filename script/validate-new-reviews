@@ -68,7 +68,7 @@ files.each do |file|
   puts "validating https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']} exists..."
   response = Typhoeus.head "https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']}", accept_encoding: 'gzip'
   puts "response.success: #{response.success?}, with code: #{response.response_code}"
-  if response.success? || response.response_code == 200
+  if response.success? || response.response_code == 200 || response.response_code == 429
     puts "success! repo exists"
   else
     puts "response failed from https://github.com/#{pfm['repository_owner']}/#{pfm['repository_name']}"
