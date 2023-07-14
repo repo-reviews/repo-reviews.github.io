@@ -4,7 +4,7 @@
 
 Support the community with a helpful ❤️ [repo review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) ❤️
 
-Please condiser giving this repo a ⭐!
+Please consider giving this repo a ⭐!
 
 ## About
 
