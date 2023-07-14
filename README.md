@@ -2,9 +2,7 @@
 
 | [Project Source](https://github.com/repo-reviews/repo-reviews.github.io) | [Website](https://repo-reviews.github.io) | [Create a review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) |
 
-Support the community with a helpful ❤️ [repo review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) ❤️
-
-Please consider giving this repo a ⭐!
+Support the community with a helpful ❤️ [repo review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) ❤️  Please consider giving this repo a ⭐!
 
 ## About
 
