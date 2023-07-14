@@ -2,6 +2,8 @@
 
 Support the community with a helpful ❤️ repo review ❤️.
 
+Please condiser giving this repo a ⭐!
+
 Please read our [Contributing Guide](./docs/CONTRIBUTING.md) and [Code of Conduct](./docs/CODE_OF_CONDUCT.md).
 
 ---
