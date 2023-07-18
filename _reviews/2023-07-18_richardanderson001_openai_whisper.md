@@ -10,7 +10,7 @@ date: 2023-07-18
 Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multitasking model that can perform multilingual speech recognition, speech translation, and language identification.
 
 Most heavily developed recently by:
-- https://github.com/jongwook, technical staff at OpenAI
+- [https://github.com/jongwook](https://github.com/jongwook): technical staff at OpenAI
 
 
 ## pros
@@ -30,5 +30,5 @@ Would love to get a better perspective on what the biggest issues for this repo 
 
 The [Show and tell](https://github.com/openai/whisper/discussions/categories/show-and-tell) has helpful stories.
 
-Also examples exist on https://huggingface.co/spaces/aadnk/whisper-webui
+Also examples exist on [https://huggingface.co/spaces/aadnk/whisper-webui](https://huggingface.co/spaces/aadnk/whisper-webui)
 
