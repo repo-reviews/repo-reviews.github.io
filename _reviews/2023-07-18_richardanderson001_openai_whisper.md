@@ -6,6 +6,12 @@ review_title: Well built with easy install
 author_github_id: richardanderson001
 date: 2023-07-18
 ---
+
+![image](https://github.com/repo-reviews/repo-reviews.github.io/assets/136455818/2008b37a-abbe-4b85-912a-cb80f1a9c90b)
+
+![image](https://github.com/repo-reviews/repo-reviews.github.io/assets/136455818/b31c5498-ba5a-4273-9a01-99fb5b7f587b)
+
+
 # Summary
 Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multitasking model that can perform multilingual speech recognition, speech translation, and language identification.
 
