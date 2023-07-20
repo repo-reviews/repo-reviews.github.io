@@ -6,7 +6,7 @@ review_title: Realtime Character AI platform,
 author_github_id: richardanderson001
 date: 2023-07-18
 ---
-This repo was built by ex-googler Shaun Wei.  You can buy him a coffee at: https://www.buymeacoffee.com/shaunw he deserves it!
+This repo was built by ex-googler Shaun Wei.  You can buy him a coffee at: [https://www.buymeacoffee.com/shaunw](https://www.buymeacoffee.com/shaunw) he deserves it!
 
 Some of the key contributors:
 - [https://github.com/Shaunwei](https://github.com/Shaunwei)
