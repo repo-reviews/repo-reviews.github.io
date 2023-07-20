@@ -14,5 +14,5 @@ Note that stars don't always translate into utility: many people use stars just 
 
 Stats, currently: 4.6k stars, 222 forks.
 
-Sponsor them at: https://github.com/sponsors/star-history
+Sponsor them at: [https://github.com/sponsors/star-history](https://github.com/sponsors/star-history)https://github.com/sponsors/star-history
 

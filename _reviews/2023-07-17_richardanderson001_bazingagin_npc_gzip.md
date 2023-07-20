@@ -7,7 +7,7 @@ author_github_id: richardanderson001
 date: 2023-07-17
 ---
 # Pros
-This is a handy repo shared by the authors of the paper **“Low-Resource” Text Classification: A Parameter-Free Classification Method with Compressors**, available at https://aclanthology.org/2023.findings-acl.426/
+This is a handy repo shared by the authors of the paper **“Low-Resource” Text Classification: A Parameter-Free Classification Method with Compressors**, available at [https://aclanthology.org/2023.findings-acl.426/](https://aclanthology.org/2023.findings-acl.426/)
 
 A copy of the abstract:
 
