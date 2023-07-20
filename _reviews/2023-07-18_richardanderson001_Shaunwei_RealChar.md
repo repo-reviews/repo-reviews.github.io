@@ -9,10 +9,10 @@ date: 2023-07-18
 This repo was built by ex-googler Shaun Wei.  You can buy him a coffee at: https://www.buymeacoffee.com/shaunw he deserves it!
 
 Some of the key contributors:
-- https://github.com/Shaunwei
-- https://github.com/lynchee-owo
-- https://github.com/ZongZiWang
-- https://github.com/pycui
+- [https://github.com/Shaunwei](https://github.com/Shaunwei)
+- [https://github.com/lynchee-owo](https://github.com/lynchee-owo)
+- [https://github.com/ZongZiWang](https://github.com/ZongZiWang)
+- [https://github.com/pycui](https://github.com/pycui)
 
 This is a strong team including people with experience at Google, Uber, and Figma.  I would expect quality to be high and development to be fast.
 
@@ -30,7 +30,7 @@ The RealChar repository is a project that allows you to create, customize and ta
   - supports multiple platforms
 
 - working build and docker instructions!
-- tutorial videos: https://www.youtube.com/watch?v=Q16ZH3kJWxw
+- tutorial videos: [https://www.youtube.com/watch?v=Q16ZH3kJWxw](https://www.youtube.com/watch?v=Q16ZH3kJWxw)
 
 ## Cons
 - if building from source, a substantial list of dependencies increases footprint and likelihood of breakage over time
@@ -42,8 +42,8 @@ The RealChar repository is a project that allows you to create, customize and ta
 
 This is a super cool repo, built by a very talented team.  Since it is in rapid early develoment, expect changes and possible backwards compatibility issues in new releases; ie. roadmap plans to move away from Vanilla JS.
 
-https://www.youtube.com/watch?v=Q16ZH3kJWxw
+[https://www.youtube.com/watch?v=Q16ZH3kJWxw](https://www.youtube.com/watch?v=Q16ZH3kJWxw)
 
-Try it out at the website: https://realchar.ai/
+Try it out at the website: [https://realchar.ai/](https://realchar.ai/)https://realchar.ai/
 
 
