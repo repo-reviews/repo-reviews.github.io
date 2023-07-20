@@ -59,8 +59,7 @@ files.each do |file|
   end
 
   unless success == 1
-    puts 'ERROR: review incorrectly formatted:'
-    puts '  see new_reviews/template/review_template.md for example'
+    puts 'ERROR: review incorrectly formatted'
     exit 1
   end
 
