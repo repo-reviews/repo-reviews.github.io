@@ -1,7 +1,7 @@
 ---
-repository_owner: repo-reviews
-repository_name: my-first-review
-review_title: This is my first review
+repository_owner: petehunt
+repository_name: react-howto
+review_title: Start with React, nothing else
 ---
 
 ![image](https://github.com/repo-reviews/repo-reviews.github.io/assets/136455818/ffad99d7-5389-4188-ab2a-e12fef4f716b)
