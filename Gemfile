@@ -8,7 +8,6 @@ group :jekyll_plugins do
   gem 'jekyll-octicons'
   # need lazy-load support
   gem 'jekyll-avatar'
-  gem 'minima'
 end
 
 group :development, :test do
