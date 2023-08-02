@@ -13,7 +13,18 @@ Support the community with a helpful ❤️ [repo review](https://github.com/rep
 
 *GitHub repos don’t include stories of user experiences.*
 
-*Sharing these stories can avoid rabbit-holes and save time, greatly increasing productivity across the community.*
+The purpose of reviews is not to flag issues, but share UX stories.  For example:
+- a repo could be working as intended, but might not be a suitable fit for a particular user, stack, or implementation
+- a repo could be losing momentum, core team moved on, or have other development meta-issues that would be helpful sharing
+- particularly critical issues are `wontfix` or `not planned` or on a long-term dev roadmap
+- multiple repos could be attempting to achieve the same goal, the process of comparing repos can be very time-consuming
+
+💡 In these cases, it can **save a person, team, or company hours, if not days** of work to read through reviews.
+
+Hence a tool for sharing UX stories in an independent, transparent, and centrally-located repo.  
+
+*Sharing UX stories can avoid rabbit-holes and save time, greatly increasing productivity across the community.*
+
 
 ## Add badges
 
