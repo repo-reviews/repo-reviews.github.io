@@ -1,6 +1,6 @@
 # Repo Reviews [![pages-build-deployment](https://github.com/repo-reviews/repo-reviews.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/repo-reviews/repo-reviews.github.io/actions/workflows/pages/pages-build-deployment) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=repo-reviews)
 
-| [Project Source](https://github.com/repo-reviews/repo-reviews.github.io) | [Website](https://repo-reviews.github.io) | [Create a review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) |
+| [Project Source](https://github.com/repo-reviews/repo-reviews.github.io) | [Website](https://repo-reviews.github.io) | [Create a review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) | [Why?](https://github.com/repo-reviews/repo-reviews.github.io/tree/main#why) |
 
 Support the community with a helpful ❤️ [repo review](https://github.com/repo-reviews/repo-reviews.github.io/blob/main/create.md) ❤️  Please consider giving this repo a ⭐!
 
