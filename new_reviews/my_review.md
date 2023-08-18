@@ -1,6 +1,6 @@
 ---
 repository_owner: pulumi
-repository_name: pulummi
+repository_name: pulumi
 review_title: OSS is good alternative to Terraform
 ---
 
