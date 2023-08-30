@@ -17,6 +17,7 @@ The purpose of reviews is not to flag issues, but share UX stories.  For example
 - a repo could be working as intended, but might not be a suitable fit for a particular user, stack, or implementation
 - a repo could be losing momentum, core team moved on, or have other development meta-issues that would be helpful sharing
   - [a great example](https://github.com/dsgibbons/shap/discussions/1)
+  - [another example](https://github.com/Stability-AI/StableLM/issues/83#issuecomment-1697474969)
 - particularly critical issues are `wontfix` or `not planned` or on a long-term dev roadmap
 - multiple repos could be attempting to achieve the same goal, the process of comparing repos can be very time-consuming
 
